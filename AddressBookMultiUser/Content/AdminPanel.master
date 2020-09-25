@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminPanel.master.cs" Inherits="Content_AdminPanel" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Content/AdminPanel/Assets/css/bootstrap.min.css") %>" />
+    <script src="<%=ResolveClientUrl("~/Content/AdminPanel/Assets/js/bootstrap.min.js") %>"></script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+    <style>
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="row pt-4 pb-3 mb-5 shadow-sm rounded-lg">
+                <div class="col-md-3 text-left" style="padding-left: 30px;">
+                    <h2 class="font-weight-bold">Address Book</h2>
+                </div>
+                <div class="col-md-9 text-right">
+                    <div class="col">
+                        <asp:Label ID="lblDisplayName" runat="server"></asp:Label>
+                        <span>|</span>
+                        <asp:LinkButton ID="lbLogout" runat="server" Text="Logout" CssClass="text-danger" OnClick="lbLogout_Click"></asp:LinkButton>
+                    </div>
+                    <div class="col">
+                        <asp:HyperLink ID="hlHomeHeader" runat="server" NavigateUrl="~/AdminPanel/Home.aspx">Home</asp:HyperLink>
+                        <span>|</span>
+                        <asp:HyperLink ID="hlContactHeader" runat="server" NavigateUrl="~/AdminPanel/Contact/ContactList.aspx">Contact</asp:HyperLink>
+                        <span>|</span>
+                        <asp:HyperLink ID="hlCityHeader" runat="server" NavigateUrl="~/AdminPanel/City/CityList.aspx">City</asp:HyperLink>
+                        <span>|</span>
+                        <asp:HyperLink ID="hlStateHeader" runat="server" NavigateUrl="~/AdminPanel/State/StateList.aspx">State</asp:HyperLink>
+                        <span>|</span>
+                        <asp:HyperLink ID="hlCountryHeader" runat="server" NavigateUrl="~/AdminPanel/Country/CountryList.aspx">Country</asp:HyperLink>
+                        <span>|</span>
+                        <asp:HyperLink ID="hlBloodGroupHeader" runat="server" NavigateUrl="~/AdminPanel/BloodGroup/BloodGroupList.aspx">Blood Group</asp:HyperLink>
+                        <span>|</span>
+                        <asp:HyperLink ID="hlContactCategoryHeader" runat="server" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryList.aspx">Contact Category</asp:HyperLink>
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="row mt-2 mb-2">
+                <div class="col-md-12 text-center">
+                    <h5>180540107089
+                    <span>-</span>
+                        Prit Kathrotiya</h5>
+                </div>
+                <div class="col-md-12 text-center">
+                    <asp:HyperLink ID="hlHomeFooter" runat="server" NavigateUrl="~/AdminPanel/Home.aspx">Home</asp:HyperLink>
+                    <span>|</span>
+                    <asp:HyperLink ID="hlUploadPhoto" runat="server" NavigateUrl="~/AdminPanel/UploadPhoto.aspx">Upload Photo</asp:HyperLink>
+                    <span>|</span>
+                    <asp:HyperLink ID="hlViewContact" runat="server" NavigateUrl="~/AdminPanel/ContactWithPhoto.aspx">Contact With Photo</asp:HyperLink>
+                </div>
+                <div class="col-md-12 text-center">
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+    <asp:ContentPlaceHolder ID="cphScript" runat="server" />
+</body>
+</html>
