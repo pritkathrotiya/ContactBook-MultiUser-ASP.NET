@@ -7,3 +7,5 @@ First you need to download **datatbase.sql** file and execute in MS-SQL
 **Change your database name, username and password** in web.config file in ASP.NET 
 
 Now can use this project. You can perfom CRUD operation with database using this web application
+
+Login Username and password is **admin** or use can change in your database also
